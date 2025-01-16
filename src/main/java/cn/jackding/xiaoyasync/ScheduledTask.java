@@ -21,7 +21,7 @@ public class ScheduledTask {
     /**
      * 每日更新
      */
-    @Scheduled(cron = "0 0 6,18 * * ?")
+    @Scheduled(cron = "0 0 5,17 * * ?")
     public void syncUpdatedDaily() {
         Util.randomSleep();
         syncService.syncFiles("每日更新/");
