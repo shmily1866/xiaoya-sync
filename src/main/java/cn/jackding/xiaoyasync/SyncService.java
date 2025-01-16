@@ -63,7 +63,7 @@ public class SyncService {
     private List<String> syncList = Arrays.asList("115/.*,PikPak/.*,测试/.*,ISO/.*,动漫/.*,每日更新/.*,电影/.*,电视剧/.*,纪录片/.*,纪录片（已刮削）/.*,综艺/.*,音乐/.*,\uD83D\uDCFA画质演示测试（4K，8K，HDR，Dolby）/.*".split(","));
 
     //这个是全部元数据的网站列表  在这个列表里面就同步全部元数据并且删除过时数据 否则不会删除
-    private final List<String> allBaseUrl = Arrays.asList("https://icyou.eu.org/,https://emby.8.net.co/,https://emby.raydoom.tk/,https://emby.kaiserver.uk/,https://embyxiaoya.laogl.top/,https://emby.xiaoya.pro/,https://emby-data.raydoom.tk/,https://emby-data.5168168.xyz/,https://emby-data.ermaokj.com/,https://emby-data.tmxy.pp.ua/,https://emby-data.poxi1221.eu.org/".split(","));
+    private final List<String> allBaseUrl = Arrays.asList("https://icyou.eu.org/,https://emby.8.net.co/,https://emby.raydoom.tk/,https://emby.kaiserver.uk/,https://embyxiaoya.laogl.top/,https://emby.xiaoya.pro/,https://emby-data.raydoom.tk/,https://emby-data.5168168.xyz/,https://emby-data.ermaokj.com/,https://emby-data.tmxy.pp.ua/".split(","));
 
     private volatile String userAgent = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36 Edg/125.0.0.0";
 
