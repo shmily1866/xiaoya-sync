@@ -1,4 +1,4 @@
-FROM eclipse-temurin:8u412-b08-jre-jammy
+FROM eclipse-temurin:17-jre-jammy
 LABEL title="xiaoya-sync"
 LABEL description="同步小雅emby媒体库"
 COPY ./target/application.jar /xiaoyasync.jar
@@ -15,4 +15,4 @@ ENV tgUserName="bot"
 ENV logLevel=""
 ENV retryDownEmptyFile="0"
 ENV JAVA_OPTS="-Xms32m -Xmx512m"
-ENTRYPOINT ["sh","-c","java -jar $JAVA_OPTS -XX:+UseG1GC -XX:+OptimizeStringConcat -XX:+PrintGCDetails -Xloggc:/log/gc.log -XX:+PrintGCDateStamps -XX:+PrintGCTimeStamps -XX:+PrintGCApplicationStoppedTime -XX:+PrintGCApplicationConcurrentTime -XX:+HeapDumpOnOutOfMemoryError -XX:HeapDumpPath=/log /xiaoyasync.jar"]
+ENTRYPOINT ["sh","-c","java -jar $JAVA_OPTS -XX:+UseG1GC -XX:+HeapDumpOnOutOfMemoryError -XX:HeapDumpPath=/log /xiaoyasync.jar"]
