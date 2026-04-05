@@ -1,11 +1,8 @@
 name: Java CI with Maven docker
 
+
 on:
-  push:
-    # 分支
-    branches: [ main ]
-  pull_request:
-    branches: [ main ]
+  workflow_dispatch:
 
 jobs:
   compile:
