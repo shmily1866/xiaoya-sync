@@ -466,6 +466,12 @@ public class SyncService {
                 downloadFiles = null;
                 executorService = null;
                 pool = null;
+                // +++++ 请在这里插入以下 4 行强制清理代码 +++++
+                if (client != null) {
+                    client.dispatcher().executorService().shutdown();
+                    client.connectionPool().evictAll();
+                }
+                // ++++++++++++++++++++++++++++++++++++++++
                 client = null;
                 connectionPool = null;
                 run = null;
