@@ -374,12 +374,6 @@ public class SyncService {
     // 统一成 /，避免 Windows 分隔符影响匹配
         String p = relativePath.replace('\\', '/');
 
-    // ✅ 强制忽略 ThemeSong 文件：不下载、不更新、不删除
-    // 匹配：.../theme.mp3  .../theme.strm  .../theme.flac 等
-        if (p.matches(".*/theme\\.[^/]+$")) {
-            return true;
-        }
-
         for (String pattern : excludeList) {
             if (p.matches(pattern)) {
                 return true;
